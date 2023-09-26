@@ -1,0 +1,22 @@
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 2000px;
+    background-color: #FFF;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}

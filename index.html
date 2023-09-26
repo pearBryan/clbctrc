@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+                    <!-- clone wweb : Le Thanh Binh  -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/laptop.png" type="image/gif" sizes="16x16">
+    <title>CLB CTRL/C - KGC</title>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main2.css">
+    <link rel="stylesheet" href="./assets/css/base2.css">
+    <link rel="stylesheet" href="./assets/css/responsive2.css">
+    <style> 
+        .box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 22px 149px;
+
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="nav fixed-top nav-custom">
+        <div class="container grid wide">
+            <a class="navbar__brand nameclb" href="">
+                <div class="logo-light text-white">CTRL/C CLUB - KGC</div>
+            </a>
+            <div class="navbar__menu">
+                <ul class="navbar__list">
+                    <li class="navbar__list-item ">
+                        <a class="navbar__item-link active-white" href="">Trang Chủ</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__item-link" href="#About">Giới Thiệu</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__item-link" href="#training">Đào Tạo</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__item-link" href="#team">Ban Chủ Nhiệm</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__item-link" href="#question">FAQ</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__item-link" href="#signup">Đăng ký</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="navbar__item-link" href="#contact">Liên Hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Particles -->
+    <section class="bg-home">
+
+        <div id="particles-js">
+            <img class="feature-img" src="./assets/img/final8.png" alt="">
+        </div>
+
+    </section>
+    <!-- About -->
+    <div style="margin-top: 50px; text-align: center;"> 
+    <p class="title-sub-heading"><span style="color: crimson;">New</span> Mở bán tài khoản Chat GPT cho sinh viên KGC</p>
+    <div class="title-box">
+        <button id="logginButton">
+            <span class="box">
+                MUA ngayyyy!
+            </span>
+        </button>
+    </div>
+    
+    <script>
+        // Lấy tham chiếu đến nút bấm bằng cách sử dụng id "loginButton"
+        const loginButton = document.getElementById("logginButton");
+    
+        // Thêm sự kiện click vào nút bấm
+        loginButton.addEventListener("click", function() {
+            // Chuyển qua trang khác bằng cách thay đổi window.location.href
+            window.location.href = "./gpt/index.php"; // Thay thế URL_cua_trang_khac.html bằng URL của trang bạn muốn chuyển đến
+        });
+    </script>
+    
+    <section id="About" class="section-body p100-50  ">
+        <div class="grid wide wide-2 prl-15">
+            <div class="row">
+                <div class="col c-12 m-12 l-12 text-center">
+                    <p class="title-sub-heading">
+                        Giới thiệu
+                    </p>
+                    <p class="title-desc text-muted mt-2">
+                        <strong>CTRL/C CLUB</strong> là một câu lạc bộ học thuật chuyên về lập trình trực thuộc Hội sinh viên trường Cao Đẳng Kiên Giang
+                    </p>
+                </div>
+            </div>
+            <div class="row  mt-5">
+                <div class="col c-6-m m-6 l-6 ">
+                    <img class="img-about" src="./assets/img/225.png" alt="">
+                </div>
+                <div class="col c-6-m m-6 l-6 ">
+                    <h1 class="title-heading">Câu lạc bộ CTRL/C(IT)</h1>
+                    <div class=" mt-2 justify text-muted">
+                        Trong suốt giai đoạn phát triển ý tưởng và bắt tay vào hình thành nền móng và phát triển, CLB đã và đang nhận được sự hỗ trợ trực tiếp đến từ các thầy cô giảng viên trong khoa CNTT và sự ủng hộ nhiệt tình của toàn thể sinh viên của khối ngành kỹ thuật.
+                        <br>
+                        <br> 
+                        Không chỉ vậy, Ctrl/C Club còn mang một “sứ mệnh cao cả” kết nối các thành viên với khoa CNTT, mang đến một sân chơi giúp cho các bạn sinh viên có cơ hội được cháy hết mình với đam mê lập trình và tư duy logic, đồng thời phát triển các kỹ năng mềm
+                        giúp tạo hành trang vững chắc khi ra trường trong lĩnh vực công nghệ thông tin, kỹ thuật máy tính.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Dao tao -->
+    <section class="section pb-5" id="training">
+        <div class="grid wide wide-2 prl-15">
+            <div class="row">
+                <div class="c-12 l-12 m-12 text-center">
+                    <div class="text__faq-center">
+                        <p class="title-sub-heading">Đào tạo</p>
+                        <p class="title-desc text-muted mt-2">
+                            Với mục đích và nhiệm vụ là hỗ trợ phát triển tư duy, kĩ năng lập trình, cũng như tạo ra một môi trường để giao lưu, một cầu nối gắn kết các sinh viên yêu thích ngành CNTT tại trường lại với nhau, hoạt động của CLB được chia ra làm 2 mảng chính.
+                        </p>
+                    </div>
+                </div>                
+            </div>
+            <div class="row mt-5 pt-4">
+                <div class="col-6 l-6 m-6 col-lr-6">
+                    <div class="pricing-box shadow mt-2 rounded">
+                        <h4 class="title-heading text-center">Rèn luyện kỹ năng lập trình</h4>
+                        <p class="text-muted justify">
+                            
+                        Qua các lớp học phi lợi nhuận của CLB, các anh chị khóa trên không chỉ truyền tải những kiến
+                        thức chuyên môn về C/C#/Java, Game, Web Developments,... mà còn chia sẻ
+                        những kĩ năng sống thiết thực cho các em. Từ đó, CLB sẽ giúp các thành viên mài dũa và phát triển khả năng của bản thân, 
+                        cũng như tạo ra một nền tảng vững chắc để sinh viên có thể tự tin thể hiện mình trên mọi lĩnh vực
+                    
+                        </p>
+                    </div>      
+                </div>
+                <div class="col-6 l-6 m-6 col-lr-6">
+                    <div class="pricing-box shadow mt-2 rounded">
+                        <h4 class="title-heading text-center">Rèn luyện kỹ năng mềm</h4>
+                        <p class="text-muted justify">
+                            
+                            Một CLB học thuật sẽ quá khô khan và máy móc? Hãy từ bỏ ý nghĩ đó và đến với những hoạt động
+                             thường niên hoành tráng của CLB như: Biggame, Tất Niên, Boardgame, Giáng sinh,... Không chỉ có vậy, 
+                             những hoạt động thú vị bên lề như các giải Esport, những buổi picnic nhỏ,... cũng được tổ chức liên 
+                             tục nhằm tạo cơ hội giúp các thành viên thêm gắn bó, 
+                            thân thiết nhau hơn và có được những khoảng thời gian tuyệt vời tại Trường Cao đẳng Kiên Giang.
+                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TEAM -->
+    <section class="section pb-5" id="team">
+        <div class="grid wide wide-2 prl-15">
+            <div class="row">
+                <div class="c-12 l-12 m-12 text-center">
+                    <div class="text__faq-center">
+                        <p class="title-sub-heading">Ban chủ nhiệm</p>
+                        <p class="title-desc text-muted mt-2">
+                            Giới thiệu thành viên ban chủ nhiệm.
+                        </p>
+                    </div>
+                    <div class="row mt-2 pt-4 rlt-slider">
+                        <div class="slider js-slider">
+                            <div class="slide active">
+                                <img src="./assets/img/pLBT.png" alt="">
+    
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/img/pNTKT.png" alt="">
+    
+                            </div>
+
+                            <div class="slide">
+                                <img src="./assets/img/pNPT.png" alt="">
+    
+                            </div>
+    
+                            <div class="slide">
+                                <img src="./assets/img/pNVT.png" alt="">
+                            </div>
+    
+                            <div class="slide">
+                                <img src="./assets/img/pNVK.png" alt="">
+                            </div>
+    
+                            <div class="slide">
+                                <img src="./assets/img/pLTT.png" alt="">
+                            </div>
+    
+                            <div class="slide">
+                                <img src="./assets/img/pBAM.png" alt="">
+                            </div>
+    
+                            <div class="slide">
+                                <img src="./assets/img/pMNH.png" alt="">
+                            </div>
+    
+                            <!-- thay -->
+                            <div class="slide">
+                                <img src="./assets/img/pGLBN.png" alt="">
+                            </div>
+    
+    
+                            <!-- button skip -->
+                            <div class="navigation">
+                                <i class="fa fa-chevron-left prev-btn"></i>
+                                <i class="fa fa-chevron-right next-btn"></i>
+                            </div>
+    
+                            <div class="navigation-visibility">
+                                <div class="slide-icon active"></div>
+                                <div class="slide-icon"></div>
+                                <div class="slide-icon"></div>
+                                <div class="slide-icon"></div>
+                                <div class="slide-icon"></div>
+                                <div class="slide-icon"></div>
+                                <div class="slide-icon"></div>
+                                <div class="slide-icon"></div>
+                                <div class="slide-icon"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>                
+            </div>
+
+            
+        </div>
+    </section>
+    <!-- Question about CLUB -->
+    <section class="section pb-5" id="question">
+        <div class="grid wide wide-2 prl-15">
+            <div class="row">
+                <div class="c-12 l-12 m-12 text-center">
+                    <div class="text__faq-center">
+                        <p class="title-sub-heading">Câu hỏi về CLUB</p>
+                        <p class="title-desc text-muted mt-2">
+                            Dưới đây là những câu hỏi phổ biến thường được các bạn dành cho CLUB.
+                        </p>                        
+                    </div>
+                    <div class="row mt-2 pt-4">
+                        <div class="c-12 l-12 m-12">
+                            <div class="pricing-box shadow mt-5 rounded">
+                                <div class="accordion-body">
+                                    <div class="accordion">
+                                        <div class="container">
+                                            <div class="label">CLB được hình thành như thế nào?</div>
+                                            <div class="content">Với sứ mệnh mang đến một sân chơi giúp cho các bạn sinh viên có cơ hội được cháy hết mình với đam mê lập trình và tư duy logic, đồng thời phát triển các kỹ năng mềm giúp tạo hành trang vững chắc khi ra trường trong lĩnh vực công nghệ công tin, kỹ thuật máy tính.
+        
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="container">
+                                            <div class="label">CLB có chức năng gì?</div>
+                                            <div class="content">- Là cầu nối giữa các thành viên CLB với khoa Công nghệ thông tin (CNTT) và Trường, giữa sinh viên với các cuộc thi, các cơ hội nghề nghiệp.<br>
+                                                
+                                                - Chia sẻ kinh nghiệm, kiến thức, kỹ năng giữa các thành viên, quảng bá hình ảnh và gắn kết với sinh viên trong toàn Trường.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="container">
+                                            <div class="label">CLB có nhiệm vụ gì?</div>
+                                            <div class="content">- Với các nhiệm vụ: hỗ trợ phát triển tư duy và kỹ năng lập trình, phối hợp với khoa CNTT tổ chức các chương trình giao lưu với sinh viên, tổ chức các cuộc thi bổ ích cho sinh viên.<br>
+                                                - Tổ chức các hội thảo chuyên đề giúp các thành viên có cơ hội tiếp xúc với các kiến thức chuyên ngành mới.<br>
+                                                - Tổ chức các hoạt động, các sự kiện, các giải đấu, giúp gắn kết các thành viên trong CLB.
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="container">
+                                            <div class="label">Không học CNTT có tham gia CLB không?</div>
+                                            <div class="content">Dù bạn là ai, bạn đến từ khoa nào đi nữa thì các bạn vẫn có thể học CNTT. Vì chúng ta ai cũng có cùng
+                                                một đam mê là lập trình hehe. </div>
+                                        </div>
+                                        
+                                        <div class="container">
+                                            <div class="label">Chưa biết gì về CNTT có được tham gia không?</div>
+                                            <div class="content">Trước khi là thành viên chính thức, các bạn sẽ được tham gia quá trình “đào tạo”, “rèn luyện” và “kiểm tra”. CLB sẽ đánh giá 1 “mầm non” có đủ điều kiện để trở thành thành viên chính thức hay không. Khả năng Teamwork, sự nhiệt tình và
+                                                kiến thức của các bạn sẽ được xét 1 cách công bằng. Nói-không-với-sự-ưu-tiên!
+                                                <br> => Bất cứ ai, dù chưa biết, biết một chút hay “master” đều có thể tự tin điền vào bản đăng ký nhé!.</div>
+                                        </div>
+                                        
+                                        <div class="container">
+                                            <div class="label">Làm sao để tham gia CLB?</div>
+                                            <div class="content">Link đăng ký sẽ cập nhật theo từng đợt tuyển thành viên của CLB </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- BLOG -->
+
+    <section class="section pb-5" id="signup">
+        <div class="grid wide wide-2 prl-15">
+            <div class="row">
+                <div class="c-12 l-12 m-12 text-center">
+                    <div class="text__faq-center">
+                        <p class="title-sub-heading">Đăng ký thành viên CLB <br> Thời gian mở đăng ký: 06/12 - 10/12</p>
+                        <p class="title-desc text-muted mt-2">
+                            <a style="font-size: large;" href="https://docs.google.com/forms/d/1bwxwwxQp-wzpaSJChti-whiTgqLf9hEIYNJkVD0jOOE/edit?usp=sharing">
+                                <i class="fas fa-link"></i>
+                                <strong>
+                                    Nhấn vào đây để chuyển đến link đăng ký
+                                </strong>
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>                
+            </div>
+            <div class="row mt-5 pt-4">
+                <div class="c-12 l-12 m-12">
+                    <div class="pricing-box shadow mt-2 rounded">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="section pb-5" id="contact">
+        <div class="grid wide wide-2 prl-15">
+            <div class="row">
+                <div class="c-12 l-12 m-12">
+                    <div class="text__faq-center  text-center">
+                        <p class="title-sub-heading">Liên hệ</p>
+                        <p class="title-desc text-muted mt-2">
+                            Kết nối với CTRL/C CLUB
+                        </p>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="c-12 l-12 m-12">
+                            <div class="pricing-box shadow rounded">
+                                <h3>THÔNG TIN LIÊN HỆ</h3>
+                                <p class="contact__info"><i class="far fa-envelope"></i> ctrl.c.kgc1309@gmail.com</p>
+                                <p class="contact__info"> <i class="fas fa-map-marker-alt"></i> Trường Cao đẳng Kiên Giang</p>
+                                <br>
+                                <h3>THEO DÕI BỌN MÌNH</h3>
+                                <div>
+                                    <a href="https://www.facebook.com/people/CtrlC-KGC/100072122889027/" class="contact-link link-fb"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="https://www.youtube.com/channel/UC5d2PnKFapcZzq-p_knOURg" class="contact-link"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <div class="section-footer" id="footer">
+        <div class="grid wide prl-15">
+            <div class="row">
+                <div class="c-12 l-12 m-12 text-center">
+                    <div class="text__faq-center">
+                        <p class="footer-content">
+                            2021 @ CTRL/C CLUB
+
+                        </p>
+                        
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script type="text/javascript" src="./js/particles.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/scroll.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            let header = document.querySelector('nav');
+            let windowPosition = window.scrollY > 50;
+            header.classList.toggle('black', windowPosition);
+        })
+    </script>
+    <script>
+        const accordion = document.getElementsByClassName('container');
+
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function() {
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+
+    <script type="text/javascript">
+        const slider = document.querySelector(".slider");
+        const nextBtn = document.querySelector(".next-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+        const slides = document.querySelectorAll(".slide");
+        const slideIcons = document.querySelectorAll(".slide-icon");
+        const numberOfSlides = slides.length;
+        var slideNumber = 0;
+
+        //image slider next button
+        nextBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+            });
+
+            slideNumber++;
+
+            if (slideNumber > (numberOfSlides - 1)) {
+                slideNumber = 0;
+            }
+
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+        });
+
+        //image slider previous button
+        prevBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+            });
+
+            slideNumber--;
+
+            if (slideNumber < 0) {
+                slideNumber = numberOfSlides - 1;
+            }
+
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+        });
+
+        //image slider autoplay
+        var playSlider;
+
+        var repeater = () => {
+            playSlider = setInterval(function() {
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                });
+                slideIcons.forEach((slideIcon) => {
+                    slideIcon.classList.remove("active");
+                });
+
+                slideNumber++;
+
+                if (slideNumber > (numberOfSlides - 1)) {
+                    slideNumber = 0;
+                }
+
+                slides[slideNumber].classList.add("active");
+                slideIcons[slideNumber].classList.add("active");
+            }, 10000);
+        }
+        repeater();
+
+        //stop the image slider autoplay on mouseover
+        slider.addEventListener("mouseover", () => {
+            clearInterval(playSlider);
+        });
+
+        //start the image slider autoplay again on mouseout
+        slider.addEventListener("mouseout", () => {
+            repeater();
+        });
+    </script>
+
+</body>
+
+</html>
